@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 import 'dart:ui' as ui;
 
 import 'localization/app_localizations.dart';
 
 import './util/theme/app_theme.dart';
 import './util/constants/app_strings.dart';
+
+import './app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,21 +18,21 @@ void main() async {
   final prefs = await SharedPreferences.getInstance();
   final savedLanguage = prefs.getString('language');
 
-  runApp(App(
+  runApp(MainApp(
     savedLanguage: savedLanguage,
   ));
 }
 
-class App extends StatefulWidget {
+class MainApp extends StatefulWidget {
   final String? savedLanguage;
 
-  const App({this.savedLanguage, super.key});
+  const MainApp({this.savedLanguage, super.key});
 
   @override
-  State<App> createState() => _AppState();
+  State<MainApp> createState() => _AppState();
 }
 
-class _AppState extends State<App> {
+class _AppState extends State<MainApp> {
   Locale? _locale;
 
   @override
@@ -102,15 +104,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appLocalizations = AppLocalizations.of(context)!;
-    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
-    print(isArabic);
-
-    return Scaffold(
-      body: Center(
-        child: Text(appLocalizations.welcome!),
-      ),
-    );
+    return App();
   }
 }
-
