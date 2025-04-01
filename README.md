@@ -1,6 +1,6 @@
-# flutter_application_1
+# nour_w_tazkieh
 
-A new Flutter project.
+A new Flutter project for Musliems to be helped through their life.
 
 ## Getting Started
 
