@@ -12,8 +12,11 @@ A new Flutter project for Musliems to be helped through their life.
 ## Todos
 #### Date Apr 02, 2025
   Need to add logic when clicking on each menu item
+
   Optimize the menu items button UI
+
   Implement model and get repository for each functionality (quran, azkar, zekr)
+
   Implement Prayer Section
   
 
