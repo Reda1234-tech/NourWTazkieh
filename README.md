@@ -5,7 +5,7 @@ A new Flutter project for Musliems to be helped through their life.
 
 ## Version History
 #### Date Mar 23, 2025
-  Adding first basic app structure including fisrt view of UI design
+  Adding first basic app structure including first view of UI design
 #### Date Apr 02, 2025
   Adding default files, constants, first localization version. In addition to building main menu items UI as grid view
 
